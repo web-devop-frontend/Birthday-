@@ -68,20 +68,21 @@ button:hover {
         May your day be filled with happiness, laughter, and beautiful memories.
         May Allah bless you with success, good health, and endless joy.
     </p>
+    <button onclick="document.getElementById('birthdayMusic').play()">
+🎵 Play Birthday Music
+</button>
+
+<audio id="birthdayMusic" src="happy_birthday_song.mp3" loop></audio>
     <button onclick="goBack()">⬅ Back</button>
 </div>
 
+
 <script>
 function openWish() {
-    document.getElementById('home').style.display = "none";
-    document.getElementById('wish').style.display = "block";
-}
-
-function goBack() {
-    document.getElementById('wish').style.display = "none";
-    document.getElementById('home').style.display = "block";
+  document.getElementById('home').style.display = "none";
+  document.getElementById('wish').style.display = "block";
+  document.getElementById('birthdayMusic').play();
 }
 </script>
-
 </body>
 </html>
