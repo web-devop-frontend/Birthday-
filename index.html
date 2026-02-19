@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Ifra</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fbc2eb, #fda085);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 400px;
+}
+
+button {
+    padding: 12px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff4da6;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e60073;
+}
+
+.balloons {
+    font-size: 40px;
+    animation: float 2s infinite alternate;
+}
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-15px); }
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="home">
+    <div style="font-size:60px;">🧸</div>
+    <h1>Welcome Ifra</h1>
+    <p>I have a little birthday surprise for you!</p>
+    <button onclick="openWish()">Open Wish 🎁</button>
+</div>
+
+<div class="container" id="wish" style="display:none;">
+    <div class="balloons">🎈🎉🎊</div>
+    <h2>Happy Birthday Ifra! 🎂</h2>
+    <p>
+        May your day be filled with happiness, laughter, and beautiful memories.
+        May Allah bless you with success, good health, and endless joy.
+    </p>
+    <button onclick="goBack()">⬅ Back</button>
+</div>
+
+<script>
+function openWish() {
+    document.getElementById('home').style.display = "none";
+    document.getElementById('wish').style.display = "block";
+}
+
+function goBack() {
+    document.getElementById('wish').style.display = "none";
+    document.getElementById('home').style.display = "block";
+}
+</script>
+
+</body>
+</html>
