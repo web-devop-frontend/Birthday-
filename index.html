@@ -83,6 +83,13 @@ function openWish() {
   document.getElementById('wish').style.display = "block";
   document.getElementById('birthdayMusic').play();
 }
+    function goBack() {
+    document.getElementById('wish').style.display = "none";
+    document.getElementById('home').style.display = "block";
+    var music = document.getElementById('birthdayMusic');
+    music.pause();   // stop music
+    music.currentTime = 0; // rewind to start
+    }
 </script>
 </body>
 </html>
